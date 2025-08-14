@@ -1,6 +1,6 @@
 import { randomBytes } from 'crypto'
 import * as nacl from 'tweetnacl'
-import { encode, decode } from 'tweetnacl-util'
+import * as naclUtil from 'tweetnacl-util'
 import { keccak256 } from 'js-sha3'
 import { ShieldedAccount, EncryptedStorage } from '../types'
 
@@ -94,13 +94,13 @@ export function createNoteCommitment(value: string, secret: string, randomness: 
 export function encryptData(data: string, key: string): EncryptedStorage {
   const keyBytes = Buffer.from(key.replace('0x', ''), 'hex').slice(0, 32)
   const nonce = nacl.randomBytes(24)
-  const dataBytes = encode(data)
+  const dataBytes = naclUtil.encode(data)
   
   const encrypted = nacl.secretbox(dataBytes, nonce, keyBytes)
   
   return {
-    encryptedData: encode(encrypted),
-    nonce: encode(nonce),
+    encryptedData: naclUtil.encode(encrypted),
+    nonce: naclUtil.encode(nonce),
     timestamp: Date.now()
   }
 }
@@ -110,8 +110,8 @@ export function encryptData(data: string, key: string): EncryptedStorage {
  */
 export function decryptData(encryptedStorage: EncryptedStorage, key: string): string {
   const keyBytes = Buffer.from(key.replace('0x', ''), 'hex').slice(0, 32)
-  const nonce = decode(encryptedStorage.nonce)
-  const encryptedBytes = decode(encryptedStorage.encryptedData)
+  const nonce = naclUtil.decode(encryptedStorage.nonce)
+  const encryptedBytes = naclUtil.decode(encryptedStorage.encryptedData)
   
   const decrypted = nacl.secretbox.open(encryptedBytes, nonce, keyBytes)
   
@@ -119,7 +119,7 @@ export function decryptData(encryptedStorage: EncryptedStorage, key: string): st
     throw new Error('Failed to decrypt data - invalid key or corrupted data')
   }
   
-  return decode(decrypted)
+  return naclUtil.decode(decrypted)
 }
 
 /**

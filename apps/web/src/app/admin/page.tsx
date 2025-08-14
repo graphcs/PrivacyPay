@@ -411,8 +411,8 @@ export default function PrivacyAdminPage() {
                 cursor: 'pointer',
                 transition: 'background-color 0.2s'
               }}
-              onMouseOver={(e) => e.target.style.backgroundColor = '#3b82f6'}
-              onMouseOut={(e) => e.target.style.backgroundColor = '#60a5fa'}
+              onMouseOver={(e) => (e.target as HTMLElement).style.backgroundColor = '#3b82f6'}
+              onMouseOut={(e) => (e.target as HTMLElement).style.backgroundColor = '#60a5fa'}
             >
               Refresh Privacy Stats
             </button>
@@ -430,8 +430,8 @@ export default function PrivacyAdminPage() {
                 cursor: 'pointer',
                 transition: 'background-color 0.2s'
               }}
-              onMouseOver={(e) => e.target.style.backgroundColor = '#059669'}
-              onMouseOut={(e) => e.target.style.backgroundColor = '#10b981'}
+              onMouseOver={(e) => (e.target as HTMLElement).style.backgroundColor = '#059669'}
+              onMouseOut={(e) => (e.target as HTMLElement).style.backgroundColor = '#10b981'}
             >
               Check Privacy Status
             </button>
@@ -449,8 +449,8 @@ export default function PrivacyAdminPage() {
                 cursor: 'pointer',
                 transition: 'background-color 0.2s'
               }}
-              onMouseOver={(e) => e.target.style.backgroundColor = '#d97706'}
-              onMouseOut={(e) => e.target.style.backgroundColor = '#f59e0b'}
+              onMouseOver={(e) => (e.target as HTMLElement).style.backgroundColor = '#d97706'}
+              onMouseOut={(e) => (e.target as HTMLElement).style.backgroundColor = '#f59e0b'}
             >
               Clear Cache Data
             </button>
@@ -468,8 +468,8 @@ export default function PrivacyAdminPage() {
                 cursor: 'pointer',
                 transition: 'background-color 0.2s'
               }}
-              onMouseOver={(e) => e.target.style.backgroundColor = '#9333ea'}
-              onMouseOut={(e) => e.target.style.backgroundColor = '#a855f7'}
+              onMouseOver={(e) => (e.target as HTMLElement).style.backgroundColor = '#9333ea'}
+              onMouseOut={(e) => (e.target as HTMLElement).style.backgroundColor = '#a855f7'}
             >
               Download Report
             </button>
@@ -499,8 +499,8 @@ export default function PrivacyAdminPage() {
                   cursor: 'pointer',
                   transition: 'background-color 0.2s'
                 }}
-                onMouseOver={(e) => e.target.style.backgroundColor = '#dc2626'}
-                onMouseOut={(e) => e.target.style.backgroundColor = '#ef4444'}
+                onMouseOver={(e) => (e.target as HTMLElement).style.backgroundColor = '#dc2626'}
+                onMouseOut={(e) => (e.target as HTMLElement).style.backgroundColor = '#ef4444'}
               >
                 Securely Erase Private Data
               </button>

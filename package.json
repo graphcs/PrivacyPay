@@ -1,0 +1,27 @@
+{
+  "name": "privacy-payments-mvp",
+  "version": "1.0.0",
+  "description": "Privacy-preserving payments MVP with Ethereum mainnet/testnet support",
+  "private": true,
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "setup": "pnpm install && pnpm run build:circuits",
+    "build:circuits": "pnpm --filter @privacy-payments/circuits build",
+    "start": "turbo run start"
+  },
+  "devDependencies": {
+    "@turbo/gen": "^1.10.7",
+    "turbo": "^1.10.7",
+    "typescript": "^5.2.2",
+    "eslint": "^8.48.0",
+    "prettier": "^3.0.3"
+  },
+  "packageManager": "pnpm@8.6.10",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

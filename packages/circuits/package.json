@@ -1,0 +1,32 @@
+{
+  "name": "@privacy-payments/circuits",
+  "version": "1.0.0",
+  "description": "Zero-knowledge circuits for privacy-preserving payments",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "npm run compile:circuits && npm run setup:keys && npm run build:ts",
+    "build:ts": "tsc",
+    "compile:circuits": "node scripts/compile-circuits.js",
+    "setup:keys": "node scripts/simple-setup.js",
+    "test": "jest",
+    "clean": "rm -rf dist circuits/build keys"
+  },
+  "dependencies": {
+    "circomlib": "^2.0.5",
+    "snarkjs": "^0.7.3",
+    "ffjavascript": "^0.2.63"
+  },
+  "devDependencies": {
+    "circom_tester": "^0.0.20",
+    "typescript": "^5.2.2",
+    "@types/node": "^20.8.10",
+    "jest": "^29.7.0",
+    "@types/jest": "^29.5.8"
+  },
+  "files": [
+    "dist",
+    "circuits",
+    "keys"
+  ]
+}

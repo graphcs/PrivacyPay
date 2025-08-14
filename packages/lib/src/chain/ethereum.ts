@@ -161,7 +161,7 @@ export class EthereumClient {
     }
     
     const contractWithSigner = this.contract.connect(signer)
-    const tx = await contractWithSigner.deposit(amount)
+    const tx = await (contractWithSigner as any).deposit(amount)
     
     return tx.hash
   }
@@ -175,7 +175,7 @@ export class EthereumClient {
     }
     
     const contractWithSigner = this.contract.connect(signer)
-    const tx = await contractWithSigner.shield(commitment, amount)
+    const tx = await (contractWithSigner as any).shield(commitment, amount)
     
     return tx.hash
   }
@@ -198,7 +198,7 @@ export class EthereumClient {
     // TODO: Format proof correctly for contract
     const proofBytes = ethers.zeroPadValue('0x', 32) // Placeholder
     
-    const tx = await contractWithSigner.transfer(nullifiers, commitments, proofBytes)
+    const tx = await (contractWithSigner as any).transfer(nullifiers, commitments, proofBytes)
     
     return tx.hash
   }
@@ -222,7 +222,7 @@ export class EthereumClient {
     // TODO: Format proof correctly for contract
     const proofBytes = ethers.zeroPadValue('0x', 32) // Placeholder
     
-    const tx = await contractWithSigner.unshield(nullifier, recipient, amount, proofBytes)
+    const tx = await (contractWithSigner as any).unshield(nullifier, recipient, amount, proofBytes)
     
     return tx.hash
   }

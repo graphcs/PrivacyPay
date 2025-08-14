@@ -2,6 +2,10 @@
 
 A production-ready system for privacy-preserving payments with assets on Ethereum mainnet and Sepolia testnet, featuring zero-knowledge proofs and selective disclosure for regulatory compliance.
 
+<img width="1392" height="856" alt="image" src="https://github.com/user-attachments/assets/2d12cfc8-1eaa-4b2b-9a71-296cd027da21" />
+
+<img width="1512" height="738" alt="image" src="https://github.com/user-attachments/assets/a35fb2ad-7438-4c38-b756-c4561b10cc75" />
+
 <img width="1206" height="778" alt="CleanShot 2025-08-13 at 22 08 44" src="https://github.com/user-attachments/assets/e1be303d-23ac-454b-88ea-bb23703c6667" />
 
 

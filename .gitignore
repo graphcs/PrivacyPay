@@ -117,3 +117,6 @@ Thumbs.db
 
 # Email signups (sensitive data)
 airdrop-signups.json
+
+# Claude Code
+.claude

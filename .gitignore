@@ -143,6 +143,9 @@ airdrop-signups.json
 
 # Circom compiler source (use npm package instead)
 circom/
+
+# VS Code history files
+.history/
 # Next.js build output
 .next
 out

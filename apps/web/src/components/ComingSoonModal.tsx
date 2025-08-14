@@ -89,8 +89,8 @@ export default function ComingSoonModal({ isOpen, onClose }: ComingSoonModalProp
             borderRadius: '0.25rem',
             transition: 'color 0.2s'
           }}
-          onMouseOver={(e) => e.target.style.color = 'white'}
-          onMouseOut={(e) => e.target.style.color = '#9ca3af'}
+          onMouseOver={(e) => (e.target as HTMLElement).style.color = 'white'}
+          onMouseOut={(e) => (e.target as HTMLElement).style.color = '#9ca3af'}
         >
           ×
         </button>
@@ -169,12 +169,12 @@ export default function ComingSoonModal({ isOpen, onClose }: ComingSoonModalProp
                     transition: 'border-color 0.2s, background-color 0.2s'
                   }}
                   onFocus={(e) => {
-                    e.target.style.borderColor = '#60a5fa'
-                    e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.15)'
+                    (e.target as HTMLElement).style.borderColor = '#60a5fa'
+                    ;(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.15)'
                   }}
                   onBlur={(e) => {
-                    e.target.style.borderColor = 'rgba(255, 255, 255, 0.2)'
-                    e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
+                    (e.target as HTMLElement).style.borderColor = 'rgba(255, 255, 255, 0.2)'
+                    ;(e.target as HTMLElement).style.backgroundColor = 'rgba(255, 255, 255, 0.1)'
                   }}
                 />
               </div>
@@ -201,14 +201,14 @@ export default function ComingSoonModal({ isOpen, onClose }: ComingSoonModalProp
                 }}
                 onMouseOver={(e) => {
                   if (!(!email || isSubmitting)) {
-                    e.target.style.transform = 'translateY(-1px)'
-                    e.target.style.boxShadow = '0 6px 20px rgba(96, 165, 250, 0.4)'
+                    (e.target as HTMLElement).style.transform = 'translateY(-1px)'
+                    ;(e.target as HTMLElement).style.boxShadow = '0 6px 20px rgba(96, 165, 250, 0.4)'
                   }
                 }}
                 onMouseOut={(e) => {
                   if (!(!email || isSubmitting)) {
-                    e.target.style.transform = 'translateY(0)'
-                    e.target.style.boxShadow = '0 4px 16px rgba(96, 165, 250, 0.3)'
+                    (e.target as HTMLElement).style.transform = 'translateY(0)'
+                    ;(e.target as HTMLElement).style.boxShadow = '0 4px 16px rgba(96, 165, 250, 0.3)'
                   }
                 }}
               >
@@ -310,12 +310,12 @@ export default function ComingSoonModal({ isOpen, onClose }: ComingSoonModalProp
                 boxShadow: '0 4px 16px rgba(16, 185, 129, 0.3)'
               }}
               onMouseOver={(e) => {
-                e.target.style.transform = 'translateY(-1px)'
-                e.target.style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.4)'
+                (e.target as HTMLElement).style.transform = 'translateY(-1px)'
+                ;(e.target as HTMLElement).style.boxShadow = '0 6px 20px rgba(16, 185, 129, 0.4)'
               }}
               onMouseOut={(e) => {
-                e.target.style.transform = 'translateY(0)'
-                e.target.style.boxShadow = '0 4px 16px rgba(16, 185, 129, 0.3)'
+                (e.target as HTMLElement).style.transform = 'translateY(0)'
+                ;(e.target as HTMLElement).style.boxShadow = '0 4px 16px rgba(16, 185, 129, 0.3)'
               }}
             >
               Continue Exploring

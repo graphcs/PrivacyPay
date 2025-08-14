@@ -120,3 +120,6 @@ airdrop-signups.json
 
 # Claude Code
 .claude
+
+# Circom compiler source (use npm package instead)
+circom/

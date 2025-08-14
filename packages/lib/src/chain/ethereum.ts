@@ -268,7 +268,7 @@ export class EthereumClient {
     const contractWithSigner = this.contract.connect(signer)
     
     try {
-      return await contractWithSigner[method].estimateGas(...params)
+      return await (contractWithSigner as any)[method].estimateGas(...params)
     } catch (error) {
       console.error(`Error estimating gas for ${method}:`, error)
       return BigInt(500000) // Default fallback

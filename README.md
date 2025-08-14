@@ -1,6 +1,9 @@
-# Privacy Payments MVP
+# Privacy Payments 
 
-A production-ready MVP for privacy-preserving payments with assets on Ethereum mainnet and Sepolia testnet, featuring zero-knowledge proofs and selective disclosure for regulatory compliance.
+A production-ready system for privacy-preserving payments with assets on Ethereum mainnet and Sepolia testnet, featuring zero-knowledge proofs and selective disclosure for regulatory compliance.
+
+<img width="1206" height="778" alt="CleanShot 2025-08-13 at 22 08 44" src="https://github.com/user-attachments/assets/e1be303d-23ac-454b-88ea-bb23703c6667" />
+
 
 ## 🚀 Quick Start
 
